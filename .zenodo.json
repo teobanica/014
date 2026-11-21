@@ -1,0 +1,11 @@
+{
+  "title": "Noncommutative curves and surfaces in small degree",
+  "description": "<p>Preprint (20 pages, PDF and LaTeX source), together with the code used for its computations.</p><p>The free real space R^N_+ is the abstract space whose coordinates x_1,...,x_N are self-adjoint, and subject to no other relation. We study its hypersurfaces of degree 2, 3 and 4, with their matricial, bounded and unbounded points. The free quadrics are given by Hermitian forms, and the free conics are the free circle and hyperbola, the quantum discs, the quantum planes, and a few others, following Ostrovsky&#301; and Samo&#301;lenko. Our main result concerns the elliptic quadrics, where we compute the exact compactness threshold and the maximal norm, and show that compact does not imply archimedean. The free cubics in separated variables are fibered into duals of free products of cyclic groups, with PSL_2(Z) appearing for the elliptic curves. We also show that any compact free variety, given by finitely many equations, is homeomorphic to a quartic, and that the compact quartic curves, which contain the dynamics of the logistic map, cannot be classified by a list.</p>",
+  "upload_type": "publication",
+  "publication_type": "preprint",
+  "creators": [
+    {"name": "Fable, Claude"},
+    {"name": "Banica, Teodor", "affiliation": "CY Cergy Paris Université", "orcid": "0000-0003-4680-0364"}
+  ],
+  "keywords": ["free conic", "free quadric", "quantum disc", "sum of squares", "free real algebraic geometry", "noncommutative algebraic geometry", "Cuntz algebra", "logistic map"]
+}
