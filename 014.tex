@@ -1,0 +1,755 @@
+\documentclass[11pt]{amsart}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{amssymb,amsmath}
+\usepackage[margin=28mm]{geometry}
+\usepackage{xcolor}
+\usepackage[colorlinks=true,linkcolor=magenta,citecolor=magenta,urlcolor=magenta]{hyperref}
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem*{theorema}{Theorem A}
+\newtheorem*{theoremb}{Theorem B}
+\newtheorem*{theoremc}{Theorem C}
+\newtheorem*{theoremd}{Theorem D}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\newtheorem{definition}[theorem]{Definition}
+\theoremstyle{definition}
+\newtheorem{question}[theorem]{Question}
+
+\begin{document}
+
+\title[Noncommutative curves and surfaces]{Noncommutative curves and surfaces in small degree}
+
+\author{C. Fable and T. Banica}
+
+\subjclass[2020]{14A22 (14P10, 46L89)}
+\keywords{Free conic, free quadric, quantum disc, sum of squares}
+
+\begin{abstract}
+We study the free analogues of the real algebraic curves and surfaces of small degree, defined by one polynomial equation in $N$ self-adjoint noncommuting variables. In degree 2 and 3 this brings together known results, coming from several sources. A free quadric corresponds to a Hermitian form $H=Q+iP$, the free conics are the quadratic relations classified by Ostrovsky\u\i\ and Samo\u\i lenko, which include the free circle, the quantum discs and planes, and the Heisenberg relation, and the free cubics in separated variables are fibered into duals of free products of cyclic groups. Our main new result concerns the elliptic quadrics, for which 3 notions of compactness, which coincide in the classical case, are shown to be different, with sharp thresholds. We also show that any compact free variety, given by finitely many equations, is homeomorphic to a quartic, and that the compact quartic curves, which contain the dynamics of the logistic map, cannot be classified by a list.
+\end{abstract}
+
+\maketitle
+
+\tableofcontents
+
+\section*{Introduction}
+
+The free real space $\mathbb R^N_+$ is the abstract space whose coordinates $x_1,\ldots,x_N$ are self-adjoint, and are subject to no other relation. Its algebraic submanifolds, obtained by imposing noncommutative polynomial relations on the coordinates, are the basic objects of free geometry. The compact case is quite well understood, with the main example being the free sphere $S^{N-1}_{\mathbb R,+}$, given by $\sum_ix_i^2=1$, whose quantum isometry group is $O_N^+$, and which can be studied by using $C^*$-algebras, quantum groups and free probability, see \cite{ban}, \cite{bgo}.
+
+In this paper we go beyond the compact case, and we proceed as the classical geometers did, by looking at what happens in small degree. Recall that the conics go back to Apollonius, around 200 BC, that the coordinates came with Descartes, in 1637, that Newton classified the cubics into 72 species, in 1704, and that the systematic study of the curves and surfaces of small degree culminated with the work of the Italian school, around 1900. Our objects are the free hypersurfaces $X_f\subset\mathbb R^N_+$, given by one equation $f=0$, with $f=f^*$ being a noncommutative polynomial, of degree 2, 3 or 4. The questions are the usual ones: classification, description of the points, compactness, symmetries.
+
+It turns out that a good part of the answers is known, in other languages, and in several places. The free real algebraic geometry of Helton, McCullough, Klep, Schweighofer and others \cite{chm}, \cite{hel}, \cite{hkm}, \cite{hm1}, \cite{ksc} deals with the matricial points of such varieties, and with sums of squares. The quadratic relations between 2 self-adjoint operators were classified, together with their representations, by Ostrovsky\u\i\ and Samo\u\i lenko \cite{os1}, who also related the relations of type $z^*z=F(zz^*)$ to the dynamics of $F$, see \cite{os1}, \cite{os2}. Finally, the noncommutative plane curves over algebraically closed fields were studied by J\o ndrup, Laudal and Sletsj\o e \cite{jls}. Our aim here is to put these results together, in geometric form, in the setting of free geometry, then to add a few new results, and to formulate some questions.
+
+A first observation is that a free quadric is not given by a real quadratic form $Q$, but by a Hermitian form $H=Q+iP$, with the antisymmetric part $P$ recording the commutators $i[x_i,x_j]$, which are self-adjoint polynomials of degree 2. In 2 variables we have, following Ostrovsky\u\i\ and Samo\u\i lenko \cite{os1}:
+
+\begin{theorema}
+Up to affine changes of coordinates, the free conics $f(x,y)=0$ are, in terms of $z=x+iy$, and of $u=x+y$, $v=x-y$:
+\begin{enumerate}
+\item The elliptic conics $z^*z-qzz^*=\varepsilon(1-q)$, with $q\in[-1,1)$ and $\varepsilon\in\{1,0,-1\}$.
+
+\item The hyperbolic conics $e^{-i\theta}uv+e^{i\theta}vu=2\varepsilon\cos\theta$, with $\theta\in[0,\pi/2)$ and $\varepsilon\in\{1,0\}$.
+
+\item A list of $11$ parabolic and flat conics, including $y=x^2$, the Jordan relation $i[y,x]=x^2$, the Heisenberg relation $i[x,y]=1$, and the affine relation $[x,y]=iy$.
+\end{enumerate}
+The conics with $P=0$ are the liberations of the $9$ classical types of affine conics, and for the free circle and the free hyperbola the irreducible points have dimension $\leq2$. As for the conics with $P\neq0$, all their matricial points consist of commuting matrices.
+\end{theorema}
+
+Here the free circle is the case $q=-1$, $\varepsilon=1$, and the other elliptic conics with $\varepsilon=1$ are the quantum discs, whose $C^*$-algebra is the Toeplitz algebra. With $\varepsilon=0$ we obtain quantum planes. The classification and the representations are from \cite{os1}. What we add is the geometric formulation: the form $H=Q+iP$, the fact that the quantum discs form the pencil spanned by the free circle and by the classical plane $[x,y]=0$, with the usual circle as base locus, a description of the free circle as being fibered over a disc, whose boundary is doubly covered by the usual circle, and a short uniform proof of the last assertion.
+
+Thus the finite dimensional points can miss most of the structure. This is why we use 3 types of points, namely matricial, bounded and unbounded, and 3 notions of compactness, called matricial compactness, compactness and archimedeanity, with the latter being the algebraic condition, in terms of sums of squares, which appears in the Positivstellensatz of Putinar \cite{put}. In the classical case these notions coincide, by a theorem of Schm\"udgen \cite{sc1}. In the free case, we have:
+
+\begin{theoremb}
+Any free quadric in $N=2n$ variables with $Q>0$, having at least $2$ classical points, can be written, after an affine change of coordinates, as
+$$\sum_{k=1}^n\left(w_k^*w_k-q_kw_kw_k^*\right)=1$$
+where $w_k=(x_{2k-1}+ix_{2k})/\sqrt{1-q_k}$, with $q_k\in[-1,1)$. With $\kappa=\sum_k\max(q_k,0)$, we have:
+\begin{enumerate}
+\item It is always matricially compact.
+
+\item It is compact precisely when $\kappa<1$, with $\max_k||w_k||^2=(1-\kappa)^{-1}$ in this case.
+
+\item It is archimedean precisely when $\kappa=0$.
+\end{enumerate}
+\end{theoremb}
+
+When $N$ is odd the same holds, with an extra term $x_N^2$ on the left. In the isotropic case, $q_k=q$ for any $k$, we obtain a family of twisted spheres which starts with the free sphere at $q=-1$, stays compact for $q<1/n$, and blows up at $q=1/n$, with the points of maximal norm coming from the Cuntz algebra $O_n$. For $q\geq1/n$ each set of $k\times k$ points is still compact, but there is no bound which is uniform in $k$.
+
+In degree 3 the main phenomenon is of a different nature, as follows:
+
+\begin{theoremc}
+For a free curve $p(x)=g(y)$ the element $t=p(x)=g(y)$ is central, and the bounded irreducible points over $t\in\mathbb R$ correspond to the irreducible representations of $\mathbb Z_r*\mathbb Z_s$, where $r,s$ are the numbers of distinct real roots of $p-t$ and $g-t$. In particular, for a free elliptic curve $y^2=p(x)$, with $p$ having a local maximum $M>0$, the fibers over an interval ending at $M$ are duals of $\mathbb Z_2*\mathbb Z_3=PSL_2(\mathbb Z)$.
+\end{theoremc}
+
+Thus the free circle and the free hyperbola, with fibers coming from $\mathbb Z_2*\mathbb Z_2$, are tame, while such cubics are wild. Over an algebraically closed field such a fibration was found in \cite{jls}, for the cusp $y^2=x^3$. In our real setting the fibers depend on the numbers of real roots, and for instance the cusp, and many other free curves of odd degree, are in fact classical, at the level of bounded points. On the other hand, we will see that $x^2+y^2+[x,[x,y]]=1$ is a compact free cubic, having the usual circle as classical version.
+
+Finally, in degree 4 we discuss the classification of the compact quartics up to homeomorphism, meaning isomorphism of the associated $C^*$-algebras. The answer is as follows:
+
+\begin{theoremd}
+The compact free quartics have the following properties:
+\begin{enumerate}
+\item Any compact free variety $X\subset\mathbb R^N_+$, given by finitely many equations, is homeomorphic to a compact free quartic, in a bigger free space, of the form
+$$g_1^2+\ldots+g_s^2=0$$
+with each $g_j=g_j^*$ being of degree $\leq2$.
+
+\item The free quartic curves $L_r$ given by
+$$z^*z=r\,zz^*(1-zz^*)$$
+with $r\in(1,4]$ are compact, and the number $c_k(r)$ of cycles of length $k\geq2$ of the logistic map $\mu\to r\mu(1-\mu)$ is a homeomorphism invariant of $L_r$. In particular, these curves fall into uncountably many homeomorphism classes.
+\end{enumerate}
+\end{theoremd}
+
+In particular the noncommutative tori, the Cuntz algebras and the free quantum groups are all quartics, and there is no hope for a list. As for the second assertion, this comes from the fact that the irreducible matricial points of size $k\geq2$ of $L_r$ are known to correspond to the cycles of length $k$ of the logistic map, see \cite{crm}, \cite{os1}. Thus the classification of the quartic curves contains that of the quadratic maps of the interval, with the entropy as a continuous invariant. We also show that a free hypersurface whose top Gram matrix is positive definite is archimedean.
+
+To our knowledge, Theorems B and D are new, and so are the real aspects of Theorem C. We believe that the subject is of interest for the people working on free quantum groups, on free real algebraic geometry, and on the representations of $*$-algebras, each of these areas having a piece of the picture, and we have included at the end a list of open questions.
+
+Physically speaking, the present work is the first part of the first step of the program outlined in \cite{bop}. That program needs a good theory of noncompact quantum groups and of their homogeneous spaces, and a first task in this direction is to become familiar with the noncompact free manifolds, in the simplest possible situations. For the noncommutative geometry approach to particle physics, we refer to \cite{cma}.
+
+The paper is organized as follows: Section 1 contains generalities, in Section 2 we discuss the quadrics, Sections 3--4 deal with the conics, in Section 5 we study the elliptic quadrics, Sections 6--7 contain the results on cubics and quartics, and Section 8 contains a list of open questions.
+
+\medskip
+
+{\em Acknowledgments.} We would like to thank Alex Chirvasitu for some useful discussions on these topics, some time ago.
+
+\section{Free varieties and their points}
+
+We denote by $\mathbb C<x_1,\ldots,x_N>$ the algebra of noncommutative polynomials in $N$ variables, with the involution making the variables self-adjoint, $x_i^*=x_i$. Thus the involution reverses the order of the terms in each monomial, and conjugates the coefficients.
+
+\begin{definition}
+The free real space $\mathbb R^N_+$ is the abstract space having as coordinate algebra $\mathcal O(\mathbb R^N_+)=\mathbb C<x_1,\ldots,x_N>$. A free real algebraic variety $X\subset\mathbb R^N_+$ is given by
+$$\mathcal O(X)=\mathbb C<x_1,\ldots,x_N>/I$$
+with $I$ being a $*$-ideal. When $I=(f)$ with $f=f^*$, we write $X=X_f$, and we call $X$ a free hypersurface, or free curve when $N=2$, and free surface when $N=3$.
+\end{definition}
+
+Observe that an equation $f=0$ with $f$ not self-adjoint must be regarded as a system of 2 equations, namely $f+f^*=0$ and $i(f-f^*)=0$, and so defines an intersection of 2 hypersurfaces. The points of our varieties are of several types, as follows:
+
+\begin{definition}
+Let $X\subset\mathbb R^N_+$ be a free real algebraic variety.
+\begin{enumerate}
+\item The classical points are the $*$-representations $\mathcal O(X)\to\mathbb C$. They form a real algebraic set $X^\times\subset\mathbb R^N$, called classical version of $X$.
+
+\item The matricial points are the $*$-representations $\mathcal O(X)\to M_k(\mathbb C)$. They form a set $X^{(k)}$ of $N$-tuples of self-adjoint $k\times k$ matrices, with $X^{(1)}=X^\times$.
+
+\item The bounded points are the $*$-representations $\mathcal O(X)\to B(H)$, with $H$ being a Hilbert space.
+
+\item The unbounded points are the $*$-representations of $\mathcal O(X)$ by linear operators on a dense subspace $D\subset H$, satisfying $<\pi(a)\xi,\eta>=<\xi,\pi(a^*)\eta>$ for any $\xi,\eta\in D$.
+\end{enumerate}
+\end{definition}
+
+Each $X^{(k)}$ is a real algebraic subset of $\mathbb R^{Nk^2}$, which is invariant under the conjugation action of $U_k$, and we have direct sum maps $X^{(k)}\times X^{(l)}\to X^{(k+l)}$. These are the free sets studied in \cite{hkm}. A matricial point is called classical when its components commute, so that it is a direct sum of $k$ points of $X^\times$. For the unbounded points we refer to \cite{sc2}, and for other approaches to noncommutative real algebraic varieties, to \cite{kuz}, \cite{sc4}. We say that a point is irreducible when the representation is irreducible. According to \cite{chm}, the polynomials vanishing on all the points of $X$ can form an ideal bigger than $I$. For instance $x^2=0$ implies $x=0$ at the level of points. In the opposite direction, by \cite{msw} the free semicircular variables, and more generally the tuples having maximal free entropy dimension, satisfy no polynomial relation, not even on a subspace, so they belong to no free hypersurface.
+
+In what follows we denote by $\Sigma^2$ the set of sums of squares, $\sum_jg_j^*g_j$ with $g_j\in\mathbb C<x_1,\ldots,x_N>$. With this convention, we have 3 natural notions of compactness, as follows:
+
+\begin{definition}
+A free real algebraic variety $X\subset\mathbb R^N_+$, with ideal $I$, is called:
+\begin{enumerate}
+\item Matricially compact, if each $X^{(k)}$ is compact.
+
+\item Compact, if $\sup_\pi||\pi(x_i)||<\infty$ for any $i$, with the sup over all bounded points.
+
+\item Archimedean, if $R-\sum_ix_i^2\in\Sigma^2+I$, for some $R>0$.
+\end{enumerate}
+\end{definition}
+
+When $X$ is compact we can form the enveloping $C^*$-algebra $C(X)$ of $\mathcal O(X)$, and we are in the setting of the compact quantum spaces. This is the notion of noncommutative compact real algebraic manifold from \cite{bbi}, where the manifolds were assumed to be submanifolds of the free sphere. Also following \cite{bbi}, in the compact case the matricial points of size $\leq K$ define a closed subspace of $X$, the part of $X$ which is realizable with $K\times K$ matrices. These subspaces form an increasing sequence, starting with $X^\times$, and the one of index $K$ equals $X$ precisely when the irreducible representations of $C(X)$ have dimension $\leq K$. For instance the free sphere $S^{N-1}_{\mathbb R,+}$ is archimedean. The archimedean condition is the one in the Positivstellensatz of Putinar \cite{put}, which states that in the classical case, and under this condition, the polynomials which are strictly positive on $X^\times$ belong to $\Sigma^2+I$. In general, we have:
+
+\begin{theorem}\label{t14}
+The above notions of compactness are related as follows:
+\begin{enumerate}
+\item If $X$ is archimedean, with constant $R$, then any unbounded point of $X$ is bounded, with $\sum_i||\pi(x_i)\xi||^2\leq R||\xi||^2$ for any $\xi\in D$.
+
+\item We have the implications archimedean $\implies$ compact $\implies$ matricially compact.
+
+\item If $X$ is classical, in the sense that $I$ contains the commutators $[x_i,x_j]$, the $3$ notions are equivalent, and are equivalent to the compactness of $X^\times$.
+\end{enumerate}
+\end{theorem}
+
+\begin{proof}
+(1) Write $R-\sum_ix_i^2=\sum_jg_j^*g_j+h$, with $h\in I$. Given an unbounded point $\pi$, with domain $D$, by applying $\pi$ and then the vector state at $\xi\in D$ we obtain:
+$$R||\xi||^2-\sum_i||\pi(x_i)\xi||^2=\sum_j||\pi(g_j)\xi||^2\geq0$$
+
+(2) The first implication follows from (1), and the second one is clear, because $X^{(k)}$ is closed, and is bounded when the norms of the matrices $\pi(x_i)$ are bounded.
+
+(3) Assume that $X$ is classical, so that $\mathcal O(X)$ is a quotient of $\mathbb C[x_1,\ldots,x_N]$, by an ideal generated by real polynomials $h_1,\ldots,h_m$. If $X$ is matricially compact then $X^\times=X^{(1)}$ is compact. Conversely, if $X^\times$ is compact, pick $R$ such that $R-\sum_ix_i^2>0$ on $X^\times$. By the theorem of Schm\"udgen in \cite{sc1}, applied to the compact set given by the inequalities $\pm h_j\geq0$, this polynomial belongs to the preordering generated by the polynomials $\pm h_j$, which consists of the sums of squares of real polynomials, plus elements of $(h_1,\ldots,h_m)$. Thus $X$ is archimedean.
+\end{proof}
+
+\section{Free quadrics and Hermitian forms}
+
+We discuss now the free hypersurfaces of degree 2. A self-adjoint polynomial of degree 2 has real coefficients on the linear and constant terms, and the coefficients of its quadratic part form a matrix which must be Hermitian, because $(x_ix_j)^*=x_jx_i$. Thus, we have:
+
+\begin{definition}\label{d21}
+A free quadric is a free hypersurface $X_f\subset\mathbb R^N_+$ with
+$$f=\sum_{ij}H_{ij}x_ix_j+\sum_ib_ix_i+c$$
+where $H\in M_N(\mathbb C)$ is a nonzero Hermitian matrix, $b\in\mathbb R^N$ and $c\in\mathbb R$. We write $H=Q+iP$, with $Q,P\in M_N(\mathbb R)$ being symmetric and antisymmetric. When $N=2$ we call $X_f$ a free conic.
+\end{definition}
+
+The point is that, unlike in the classical case, the antisymmetric part does not disappear. For instance at $N=2$ the matrix $P$ is given by a number $\lambda\in\mathbb R$, and contributes to $f$ with the term $i\lambda[x,y]$, which is self-adjoint, and vanishes on the classical points. Thus the classical version of $X_f$ is the usual quadric given by $(Q,b,c)$, and the free quadrics having a given classical version are parametrized by $P$, which is a new feature. At $Q=0$ we obtain varieties defined by commutation relations of Lie type, as for instance the Heisenberg relation $i[x,y]=1$. The basic properties of our decomposition $H=Q+iP$ are as follows:
+
+\begin{proposition}\label{p22}
+Let $X_f$ be a free quadric, as above.
+\begin{enumerate}
+\item We have $f=\sum_{ij}Q_{ij}x_ix_j+i\sum_{i<j}P_{ij}[x_i,x_j]+\sum_ib_ix_i+c$.
+
+\item An affine change of coordinates $x\to Tx+t$, with $T\in GL_N(\mathbb R)$ and $t\in\mathbb R^N$, changes $H\to T^tHT$, $b\to T^t(b+2Qt)$ and $c\to c+<b,t>+<Qt,t>$.
+
+\item Given a polynomial $g=\sum_{ij}A_{ij}x_ix_j+\sum_ib_ix_i+c$ with real coefficients, the variety $g=0$ is the intersection of the free quadric given by $(Q,0,b,c)$ with the free quadric given by $(0,P,0,0)$, where $Q=(A+A^t)/2$ and $P=(A-A^t)/2$.
+\end{enumerate}
+\end{proposition}
+
+\begin{proof}
+(1) This is clear from $\sum_{ij}P_{ij}x_ix_j=\sum_{i<j}P_{ij}[x_i,x_j]$.
+
+(2) The quadratic part of $f(Tx+t)$ is $\sum_{ij}H_{ij}(Tx)_i(Tx)_j$, which gives $H\to T^tHT$, and the other formulae follow in the same way, by using $\sum_{ij}H_{ij}(t_ix_j+x_it_j)=2\sum_j(Qt)_jx_j$.
+
+(3) The equations $g+g^*=0$ and $i(g-g^*)=0$ are those of the 2 quadrics in the statement.
+\end{proof}
+
+Summarizing, the classification of the free quadrics is the classification of the pairs $(Q,P)$ under $T^tQT$, $T^tPT$, with some affine data added. This is the same as the classification of the real bilinear forms $A=Q+P$ under congruence, for which canonical forms are known \cite{hse}, \cite{hs2}. In other words, in free geometry the symmetric bilinear forms are replaced by arbitrary bilinear forms. Let us look now at the matricial points:
+
+\begin{proposition}\label{p23}
+For any matricial point $(x_1,\ldots,x_N)\in X_f^{(k)}$ we have
+$$\sum_{ij}Q_{ij}\,tr(x_ix_j)+\sum_ib_i\,tr(x_i)+ck=0$$
+where $tr$ is the usual trace. Thus $X_f^{(k)}$ is contained in a classical quadric of $\mathbb R^{Nk^2}$, whose quadratic form is $k^2$ copies of $Q$, and $X_f^\times$ is the classical quadric given by $(Q,b,c)$.
+\end{proposition}
+
+\begin{proof}
+This follows by applying the trace to $f(x_1,\ldots,x_N)=0$, the commutators being of trace 0. The second assertion comes from the fact that $(x,y)\to tr(xy)$ is a positive definite form on the real vector space of self-adjoint $k\times k$ matrices, which has dimension $k^2$.
+\end{proof}
+
+We write $Q>0$ when $Q$ is positive definite, and $H\geq0$ when $H$ is positive. Observe that $H\geq0$ implies $Q\geq0$. The first general results on compactness are as follows:
+
+\begin{theorem}\label{t24}
+Let $X_f$ be a free quadric, with Hermitian form $H=Q+iP$.
+\begin{enumerate}
+\item If $Q>0$ then $X_f$ is matricially compact.
+
+\item If $X_f$ is matricially compact and $X_f^\times\neq\emptyset$, then $Q>0$ or $Q<0$.
+
+\item If $Q>0$ and $H\geq0$ then $X_f$ is archimedean.
+\end{enumerate}
+\end{theorem}
+
+\begin{proof}
+(1) This follows from Proposition \ref{p23}, the quadric of $\mathbb R^{Nk^2}$ there being compact.
+
+(2) Here $X_f^\times$ is a compact nonempty classical quadric, which must be an ellipsoid or a point, and in both cases the quadratic form is positive or negative definite.
+
+(3) Since $Q$ is invertible we can assume $b=0$, by Proposition \ref{p22}. Write $H=L^*L$ with $L\in M_N(\mathbb C)$, and consider the polynomials $L_k=\sum_iL_{ki}x_i$. Then $f=\sum_kL_k^*L_k+c$, and so:
+$$-c-L_k^*L_k\in\Sigma^2+I$$
+
+If $c>0$ we obtain $-1\in\Sigma^2+I$, hence $-x_i^2\in\Sigma^2+I$, and we are done. If $c\leq0$, each $L_k$ is bounded, in the sense that $R-L_k^*L_k\in\Sigma^2+I$ for some $R>0$. Now recall from \cite{cim} that the bounded elements form a $*$-subalgebra. Thus the real and imaginary parts of the $L_k$, which are real linear forms in $x_1,\ldots,x_N$, are bounded. If $t\in\mathbb R^N$ is killed by all these forms then $Lt=0$, so $<Qt,t>=<Ht,t>=0$, and so $t=0$. Thus these forms span all the linear forms, and so each $x_i$ is bounded, as desired.
+\end{proof}
+
+\section{Classification of the free conics}
+
+In 2 variables $x,y$ the free conics are given by $f=Q(x,y)+ip[x,y]+b_1x+b_2y+c$, where $Q(x,y)=\alpha x^2+\beta(xy+yx)+\gamma y^2$ and $p\in\mathbb R$, with $(Q,p)\neq(0,0)$. We will use the variables $z=x+iy$ and $u=x+y$, $v=x-y$, the basic formulae for them being:
+$$x^2+y^2=\frac{z^*z+zz^*}{2}\quad,\quad i[x,y]=\frac{z^*z-zz^*}{2}$$
+$$x^2-y^2=\frac{uv+vu}{2}\quad,\quad i[x,y]=\frac{i[v,u]}{2}$$
+
+We say that 2 free conics are equivalent when they correspond to each other by an affine change of coordinates, with the polynomial $f$ being taken up to a real nonzero scalar. The following result is essentially the classification of the quadratic relations between 2 self-adjoint operators from \cite{os1}, where the list consists of 19 equations and 4 series, the differences coming from the conventions.
+
+\begin{theorem}\label{t31}
+Any free conic is equivalent to exactly one of the following:
+\begin{enumerate}
+\item Elliptic: $z^*z-qzz^*=\varepsilon(1-q)$, with $q\in[-1,1)$ and $\varepsilon\in\{1,0,-1\}$.
+
+\item Hyperbolic: $e^{-i\theta}uv+e^{i\theta}vu=2\varepsilon\cos\theta$, with $\theta\in[0,\pi/2)$ and $\varepsilon\in\{1,0\}$.
+
+\item Parabolic: $y=x^2$, or $x^2=\varepsilon$, or $x^2+i[x,y]+y=0$, or $i[y,x]=x^2+\varepsilon$, with $\varepsilon\in\{1,0,-1\}$.
+
+\item Flat: $[x,y]=0$, or $i[x,y]=1$, or $[x,y]=iy$.
+\end{enumerate}
+\end{theorem}
+
+\begin{proof}
+A linear change of coordinates $T$ changes $Q\to Q\circ T$ and $p\to p\det T$, and translations act as in Proposition \ref{p22}. We can also replace $f\to-f$. We have 4 cases, according to the rank and signature of the symmetric matrix of $Q$:
+
+(1) $Q$ definite. We can assume $Q=x^2+y^2$ and $b=0$. We are left with $f=x^2+y^2+i\lambda[x,y]-c$, and with the orthogonal maps and the positive scalars as symmetries, which allow us to assume $\lambda\geq0$, and $c\in\{1,0,-1\}$. In terms of $z$ our equation reads $(1+\lambda)z^*z+(1-\lambda)zz^*=2c$, and with $q=(\lambda-1)/(\lambda+1)$ this is the equation in the statement.
+
+(2) $Q$ nondegenerate, indefinite. We can assume $Q=x^2-y^2$ and $b=0$, so that we have $f=x^2-y^2+i\mu[x,y]-c$, with $\mu\geq0$. The operation $x\leftrightarrow y$, followed by $f\to-f$, changes $c\to-c$, so we can assume $c\in\{1,0\}$. In terms of $u,v$ our equation reads $(1-i\mu)uv+(1+i\mu)vu=2c$, and with $\mu=\tan\theta$ this is the equation in the statement.
+
+(3) $Q$ of rank 1. We can assume $Q=x^2$. If $p=0$ and $b_2\neq0$ a change of the variable $y$ leads to $y=x^2$, and if $p=b_2=0$ we obtain $x^2=\varepsilon$. If $p\neq0$ and $b_2\neq0$ we can kill $b_1$ and $c$ by translations, and then rescale $x,y,f$ as to have $x^2+i[x,y]+y=0$. Finally, if $p\neq0$ and $b_2=0$, we can kill $b_1$, and we obtain $x^2+i[x,y]+c=0$, with the sign of $c$ being invariant.
+
+(4) $Q=0$. Here $f=i[x,y]+b_1x+b_2y+c$, and we obtain the 3 conics in the statement, according to whether we have $b\neq0$, or $b=0$ and $c\neq0$, or $b=c=0$.
+
+Finally, the conics that we found are not equivalent. Indeed, the rank and signature of $Q$ up to a global sign, the number $p^2/\det Q$ when $Q$ is nondegenerate, the vanishing of $p$, and the vanishing of $b$ on the kernel of $Q$ are invariant under our operations, and so is the sign of the constant term relative to $Q$, once the linear terms have been removed, when this is possible. These invariants separate the conics in the list.
+\end{proof}
+
+We denote by $E(q,\varepsilon)$ and $H(\theta,\varepsilon)$ the above elliptic and hyperbolic conics. These are related to the forms in Definition \ref{d21} by $q=(\lambda-1)/(\lambda+1)$ and $\theta=\arctan\mu$, where $\lambda,\mu\geq0$ are the coefficients of $i[x,y]$, when the symmetric part is $x^2\pm y^2$. Here is a table of the conics:
+
+\begin{center}
+\begin{tabular}{|l|l|l|l|}
+\hline
+conic&equation&classical version&comments\\
+\hline
+$E(q,1)$&$z^*z-qzz^*=1-q$&circle&free circle at $q=-1$\\
+\hline
+$E(q,0)$&$z^*z=qzz^*$&point&quantum plane for $q>0$\\
+\hline
+$E(q,-1)$&$z^*z-qzz^*=q-1$&empty set&no points for $q\leq0$\\
+\hline
+$H(\theta,1)$&$e^{-i\theta}uv+e^{i\theta}vu=2\cos\theta$&hyperbola&free hyperbola at $\theta=0$\\
+\hline
+$H(\theta,0)$&$e^{-i\theta}uv+e^{i\theta}vu=0$&2 crossing lines&$uv=-vu$ at $\theta=0$\\
+\hline
+parabolic&$y=x^2$&parabola&isomorphic to a line\\
+\hline
+parabolic&$x^2=1,0,-1$&2 lines, line, $\emptyset$&$y$ is free\\
+\hline
+parabolic&$x^2+i[x,y]+y=0$&parabola&$[x,y']=iy'$, $y'=y+x^2$\\
+\hline
+parabolic&$i[y,x]=x^2+1,0,-1$&$\emptyset$, line, 2 lines&Jordan plane at $\varepsilon=0$\\
+\hline
+flat&$[x,y]=0$&plane&classical plane\\
+\hline
+flat&$i[x,y]=1$&empty set&Heisenberg\\
+\hline
+flat&$[x,y]=iy$&line&affine Lie algebra\\
+\hline
+\end{tabular}
+\end{center}
+
+\medskip
+
+Several comments can be made. First, the conics with $p=0$ are $E(-1,\varepsilon)$, $H(0,\varepsilon)$, $y=x^2$ and $x^2=\varepsilon$, and these are the liberations of the 9 classical types of affine conics. Second, as algebras, most of the above objects are well-known: we have here the quantum planes, the Jordan plane, the Weyl algebra and its $q$-analogues, and the enveloping algebra of the affine Lie algebra, see \cite{ash}. What is specific to our setting is the involution: the elliptic and the hyperbolic conics are the 2 real forms of the relation $ab-qba=c$, with $q$ real and $a^*=b$ in the first case, and with $|q|=1$ and $a,b$ self-adjoint in the second case. Third, in geometric terms, the conics $E(q,1)$ are the members of the pencil spanned by the free circle $x^2+y^2=1$ and by the classical plane $i[x,y]=0$, and the conics $H(\theta,1)$ are the members of the pencil spanned by the free hyperbola and by the classical plane. Finally, observe that the conic $x^2=1$, where $y$ is free, is wild, see \cite{os1}.
+
+The following result shows that most of the above conics have very few matricial points. For the bounded points such statements are known, case by case, from \cite{os1}, and we give here a uniform proof, for the matricial points, which works in fact for any bounded point having a faithful tracial state. In the language of \cite{bbi}, the result shows that for a compact conic with $p\neq0$, the parts which are realizable with $K\times K$ matrices all coincide with the classical version. The identity in the proof was double-checked with the program conics.py.
+
+\begin{theorem}\label{t32}
+Let $X_f$ be a free conic with $p\neq0$, that is, with a Hermitian form which is not real. Then all the matricial points of $X_f$ are classical: if $(x,y)\in X_f^{(k)}$ then $[x,y]=0$.
+\end{theorem}
+
+\begin{proof}
+Consider the self-adjoint matrix $m=i[x,y]$. By using the trace property we have $tr(m)=0$, then $tr(mx)=tr(my)=0$ and $tr(mx^2)=tr(my^2)=0$, and also:
+$$tr(m(xy+yx))=i\,tr(xyxy-yxyx)+i\,tr(xy^2x-yx^2y)=0$$
+
+Thus $tr(mQ(x,y))=0$, and since the equation of the conic reads $pm=-Q(x,y)-b_1x-b_2y-c$, we obtain $p\,tr(m^2)=0$. But $m$ is self-adjoint, so $m=0$.
+\end{proof}
+
+\section{Points of the free conics}
+
+We describe now the bounded points of the main conics. Most of the results below can be found in \cite{os1}, in the language of pairs of self-adjoint operators, and we present them in geometric form, with short proofs. Let us start with the free circle $S^1_{\mathbb R,+}=E(-1,1)$, given by $x^2+y^2=1$, or equivalently by $z^*z+zz^*=2$.
+
+\begin{proposition}\label{p41}
+For the free circle, $z^2$ is central. The bounded irreducible points are the points $z\in\mathbb T$ of the usual circle, and for any $\zeta$ in the open unit disc, a unique point with $z^2=\zeta$, which is $2$-dimensional, given by
+$$z=\begin{pmatrix}a&b\\0&-a\end{pmatrix}\quad,\quad a^2=\zeta\quad,\quad b=\sqrt{2-2|\zeta|}$$
+\end{proposition}
+
+\begin{proof}
+We have $z^2z^*=z(2-z^*z)=2z-(2-z^*z)z=z^*z^2$, so $z^2$ is central, and so is a scalar $\zeta$ in any bounded irreducible representation. The relations show then that the algebra generated by $z,z^*$ is spanned by $1,z,z^*,zz^*$, so the dimension is at most 2. In dimension 1 we obtain $|z|=1$. In dimension 2 the matrix $z$ is not a scalar, and $z^2=\zeta$ shows that its trace is 0, so in a suitable orthonormal basis $z$ is as in the statement, with $b>0$. The relation $z^*z+zz^*=2$ reads then $2|a|^2+b^2=2$, and this gives the result.
+\end{proof}
+
+Thus the central element $z^2$ takes its values in the closed unit disc, with one irreducible point over each interior point, and with 2 characters over each boundary point, the classical circle being in this way a double cover of the boundary. In particular the free circle coincides with its part realizable with $2\times2$ matrices, in the sense of \cite{bbi}. In fact, since $x^2,y^2$ are central, we have $abc=cba$ for any $a,b,c\in\{x,y\}$, so the free circle coincides with the half-liberated circle, and we recover in this way the $2\times2$ matrix model from \cite{bi2}. The situation is similar for the free hyperbola $H(0,1)$, given by $x^2-y^2=1$, or equivalently by $uv+vu=2$:
+
+\begin{proposition}\label{p42}
+For the free hyperbola, $u^2$ and $v^2$ are central. The bounded irreducible points are the points $(u,v)=\pm(\sqrt s,1/\sqrt s)$ of the usual hyperbola, and for any $s,t>0$ with $st>1$, a unique point with $u^2=s$, $v^2=t$, which is $2$-dimensional, given by
+$$u=\sqrt s\begin{pmatrix}1&0\\0&-1\end{pmatrix}\quad,\quad v=\sqrt t\begin{pmatrix}\gamma&\delta\\ \delta&-\gamma\end{pmatrix}\quad,\quad\gamma=\frac{1}{\sqrt{st}}\quad,\quad\delta=\sqrt{1-\gamma^2}$$
+\end{proposition}
+
+\begin{proof}
+We have $u^2v=u(2-vu)=2u-(2-vu)u=vu^2$, so $u^2$ is central, and so is $v^2$. In a bounded irreducible representation we have $u^2=s$, $v^2=t$ with $s,t\geq0$, and in fact $s,t>0$, because $u=0$ or $v=0$ contradicts $uv+vu=2$. The algebra is spanned by $1,u,v,uv$, so the dimension is at most 2. Now $u/\sqrt s$ and $v/\sqrt t$ are symmetries whose anticommutator is $2\gamma$, and the square of their difference is $2-2\gamma\geq0$. When $\gamma=1$ they are equal, and we obtain the classical points. When $\gamma<1$ the dimension is 2, we can diagonalize $u$, and the relation gives the above form of $v$, with the sign of $\delta$ being irrelevant.
+\end{proof}
+
+So the central elements $u^2,v^2$ take their values in the region $st\geq1$, bounded by a branch of hyperbola, which is doubly covered by the 2 branches of the classical hyperbola. Thus both nondegenerate conics having real coefficients are of dimension 2, in a sense.
+
+Let us discuss now the conics with $p\neq0$, whose matricial points are classical, by Theorem \ref{t32}. For the conics $E(q,\varepsilon)$ with $\varepsilon\neq1$, the methods below show that when $q\leq0$ the only point is $z=0$ at $\varepsilon=0$, and that when $q>0$ there are no further bounded points, but there are unbounded ones. At $\varepsilon=0$ these are $ze_m=cq^{m/2}e_{m+1}$ on $l^2(\mathbb Z)$, and $E(q,0)$ is a quantum complex plane, of the type appearing in connection with the quantum group $E_q(2)$ of Woronowicz \cite{wo1}. For the flat conics $i[x,y]=1$ and $[x,y]=iy$ the well-behaved points correspond to the unitary representations of the Heisenberg group with fixed central character, and of the affine group of the line. Finally, the Jordan conic $i[y,x]=x^2$ becomes, formally, the Heisenberg conic in the variables $x^{-1},y$. So all these conics only have unbounded noncommutative points.
+
+As for the hyperbolic conics with $\theta>0$, here the bounded points are classical too, as shown in \cite{os1}. Here is a short proof of this fact, in our setting:
+
+\begin{proposition}\label{p43}
+For $\theta\in(0,\pi/2)$, the bounded points of the hyperbolic conic $H(\theta,\varepsilon)$ are the pairs of commuting self-adjoint operators $u,v$ satisfying $uv=\varepsilon$.
+\end{proposition}
+
+\begin{proof}
+With $\omega=-e^{2i\theta}$, which is not real, the equation reads $uv=\omega vu+(1-\omega)\varepsilon$. Thus $B=vu-\varepsilon$ satisfies $uB=\omega Bu$, and by the Fuglede-Putnam theorem, applied to the normal operators $u$ and $\omega u$, we have $uB=\bar\omega Bu$ as well. We obtain $Bu=0$, so $B$ vanishes on the range of $u$. On the other hand, for $\xi\in\ker u$ the equation gives $(1-\omega)\varepsilon||\xi||^2=0$. Thus at $\varepsilon=1$ we have $\ker u=0$, and at $\varepsilon=0$ we have $B\xi=vu\xi=0$. In both cases $B=0$, so $vu=\varepsilon$, and then $uv=\varepsilon$ as well.
+\end{proof}
+
+At $\varepsilon=0$ the above conics are the real quantum planes $uv=\omega vu$, whose unbounded points are studied in \cite{sc3}.
+
+We are left with the conics $E(q,1)$ with $q\in(-1,1)$, which are the quantum discs \cite{jsw}, \cite{kle}, \cite{pwo}. The following result is to be compared with Proposition \ref{p41}, which is the case $q=-1$.
+
+\begin{theorem}\label{t43}
+Consider the conic $z^*z-qzz^*=1-q$, with $q\in(-1,1)$.
+\begin{enumerate}
+\item The bounded irreducible points are the points $z\in\mathbb T$ of the usual circle, and the Fock representation, $ze_n=\sqrt{1-q^{n+1}}e_{n+1}$ on $l^2(\mathbb N)$.
+
+\item The conic is compact, the associated $C^*$-algebra is the Toeplitz algebra, for any $q$, and the norm of the standard coordinate is given by $||z||^2=\max(1,1-q)$.
+
+\item The conic is archimedean precisely when $q\leq0$. When $q>0$, the formula $ze_m=\sqrt{1+cq^m}e_{m+1}$ on $l^2(\mathbb Z)$ defines unbounded points, for any $c>0$.
+\end{enumerate}
+\end{theorem}
+
+\begin{proof}
+(1) At $q=0$ the equation is $z^*z=1$, and the result is the Wold decomposition of isometries \cite{cob}. Assume now $q\neq0$, and set $A=zz^*$ and $F(\mu)=q\mu+1-q$, so that $z^*z=F(A)$ and $Az=zF(A)$. Thus $z$ maps the $\mu$-eigenspace of $A$ into the $F(\mu)$-eigenspace. If $\ker A=\ker z^*$ contains a unit vector $\xi$, then the vectors $z^n\xi$ are eigenvectors of $A$ for the distinct eigenvalues $F^n(0)=1-q^n$, and by using $z^*z=F(A)$ we see that their span is invariant, and that we obtain the Fock representation. If $\ker A=0$, the polar decomposition $z^*=wA^{1/2}$, with $w$ an isometry, gives $F(A)=wAw^*$, and so $F(\sigma(A))\cup\{0\}=\sigma(A)\cup\{0\}$. Thus any $\mu\in\sigma(A)-\{0\}$ has a preimage under $F$ in $\sigma(A)$, and since $F^{-1}$ expands the distances to the fixed point 1, the boundedness of $\sigma(A)$ gives $\mu=1$ or $\mu=F^n(0)$ with $n\geq1$. In the latter case we obtain $0\in\sigma(A)$, as an isolated point, hence as an eigenvalue, which is a contradiction. Thus $A=1$, so $z^*z=1$ as well, and $z$ is a unitary, which must be a scalar.
+
+(2) In the Fock representation $z$ is the unilateral shift times a diagonal operator of the form $1+K$, with $K$ compact, so the $C^*$-algebra that we obtain is the Toeplitz algebra, and the other irreducible points factor through it. The norm is $\sup_n(1-q^{n+1})^{1/2}$.
+
+(3) In the notations of Section 3 we have $\lambda=(1+q)/(1-q)$, and the Hermitian form, with eigenvalues $1\pm\lambda$, is positive precisely when $q\leq0$. Thus for $q\leq0$ the conic is archimedean by Theorem \ref{t24}. When $q>0$ the operators in the statement, defined on the finitely supported vectors, satisfy the relation, because $(1+cq^m)-q(1+cq^{m-1})=1-q$, and they are unbounded. Thus the conic is not archimedean, by Theorem \ref{t14}.
+\end{proof}
+
+\section{Elliptic quadrics and compactness}
+
+We discuss now the free quadrics in $N$ variables which are elliptic, in the sense that $Q>0$. These are matricially compact, by Theorem \ref{t24}. By Proposition \ref{p23} the classical version is an ellipsoid, a point, or the empty set, and we restrict the attention to the first case. The antisymmetric part $P$ can be then put in normal form, by an orthogonal change of coordinates, and this leads to the following result, where $n=[N/2]$, and where the parameters $q_k$ encode the eigenvalues of $P$ with respect to $Q$:
+
+\begin{proposition}
+Any free quadric in $N=2n$ variables with $Q>0$, having at least $2$ classical points, is equivalent to
+$$\sum_{k=1}^n\left(w_k^*w_k-q_kw_kw_k^*\right)=1$$
+where $w_k=(x_{2k-1}+ix_{2k})/\sqrt{1-q_k}$, with $q_k\in[-1,1)$. The Hermitian form satisfies $H\geq0$ precisely when $q_k\leq0$ for any $k$. When $N=2n+1$ the same holds, with an extra term $x_N^2$ on the left.
+\end{proposition}
+
+\begin{proof}
+We can assume $Q=1$ and $b=0$, and the constant term must be then negative, and can be rescaled to $-1$. By conjugating with an orthogonal matrix we can put $P$ in normal form, with blocks $\begin{pmatrix}0&\lambda_k\\-\lambda_k&0\end{pmatrix}$, where $\lambda_k\geq0$, so that:
+$$f=\sum_ix_i^2+i\sum_{k=1}^n\lambda_k[x_{2k-1},x_{2k}]-1$$
+
+With $q_k=(\lambda_k-1)/(\lambda_k+1)$ we obtain, as in the proof of Theorem \ref{t31}, the equation in the statement. The eigenvalues of $H$ being $1\pm\lambda_k$, and 1 when $N$ is odd, we have $H\geq0$ precisely when $\lambda_k\leq1$ for any $k$, which means $q_k\leq0$ for any $k$.
+\end{proof}
+
+At $q_k=-1$ for any $k$ we obtain the free sphere $S^{2n-1}_{\mathbb R,+}$. At $q_k=0$ for any $k$ we obtain the quadric $\sum_kw_k^*w_k=1$, whose intersection with its conjugate $\sum_kw_kw_k^*=1$ is the free complex sphere from \cite{ban}. The matricial points of this quadric are the spherical isometries, and it was shown in \cite{hmp} that, in the real case, the polynomials which are positive on these points are sums of squares, up to polynomials vanishing on them. In order to construct points, we use the following method, where the points live on trees, with each basis vector being sent to its parent:
+
+\begin{proposition}\label{p52}
+Let $V$ be a countable set, and let $p:V\to V$ be a map. We call $p(v)$ the parent of $v$, and we call children of $v$ the elements $c\in V$ with $p(c)=v$. Assume that each $v\in V$ has a label $l(v)\in\{1,\ldots,n\}$, such that the children of any vertex have distinct labels, and let $h:V\to[0,\infty)$ be a bounded function satisfying, for any $v\in V$:
+$$h(v)=1+\sum_{p(c)=v}q_{l(c)}h(c)$$
+Then $w_ke_v=\delta_{k,l(v)}\sqrt{h(v)}\,e_{p(v)}$ defines a bounded point of the above quadric, on the Hilbert space $l^2(V)$, with $x_N=0$ when $N$ is odd.
+\end{proposition}
+
+\begin{proof}
+The operator $w_k^*$ maps $e_v$ to $\sqrt{h(c)}e_c$, where $c$ is the child of $v$ having label $k$, and to 0 if there is no such child. Thus $\sum_kw_k^*w_ke_v=h(v)e_v$, and $\sum_kq_kw_kw_k^*e_v$ is the sum in the statement times $e_v$, and the equation of the quadric holds on each $e_v$.
+\end{proof}
+
+As an illustration, a single infinite chain, with all labels equal to $k$ and with $h=1$ on the bottom vertex, gives the Fock representation of Theorem \ref{t43}, in the variable $w_k$. Representations of Cuntz type algebras constructed on trees appear in many contexts, see for instance \cite{cmr}, \cite{mpa}. In general, the numbers $h(v)$ can be large when the tree has many branches. The Cuntz algebra $O_n$ itself provides points too. Indeed, if $s_1,\ldots,s_n$ are isometries with $\sum_ks_ks_k^*=1$, then the operators $w_k=cs_k^*$ satisfy $\sum_kw_k^*w_k=c^2$ and $\sum_kw_kw_k^*=nc^2$, so we have a point of the isotropic quadric with parameter $q<1/n$, when $c^2=(1-nq)^{-1}$. As we will see, when $q>0$ these are points of maximal norm, and in general the compactness problem can be solved by using such isometries, and the trees. With $\kappa=\sum_k\max(q_k,0)$, we have the following result, which was double-checked with the program trees.py:
+
+\begin{theorem}\label{t53}
+For the elliptic quadric $\sum_{k=1}^n(w_k^*w_k-q_kw_kw_k^*)=1$, with the extra term $x_N^2$ on the left when $N$ is odd, we have:
+\begin{enumerate}
+\item Each set of matricial points $X^{(K)}$ is compact, being contained in the sphere $\sum_itr(x_i^2)=K$.
+
+\item The quadric is compact precisely when $\kappa<1$, and in this case $\max_k||w_k||^2=(1-\kappa)^{-1}$, in $C(X)$. When $\kappa\geq1$, the norms of the matricial points are not bounded.
+
+\item The quadric is archimedean precisely when $\kappa=0$, that is, when $H\geq0$.
+\end{enumerate}
+\end{theorem}
+
+\begin{proof}
+(1) This follows from Proposition \ref{p23}, in the coordinates where $Q=1$.
+
+(2) Let $S=\{k|q_k>0\}$, and consider a bounded point, with $\tau_k=||w_k||^2$. The equation of the quadric gives $w_k^*w_k\leq1+\sum_{j\in S}q_jw_jw_j^*$, so with $\sigma=\sum_{j\in S}q_j\tau_j$ we have $\tau_k\leq1+\sigma$ for any $k$. By multiplying by $q_k$ and summing over $k\in S$ we obtain $\sigma\leq\kappa(1+\sigma)$. Thus when $\kappa<1$ we have $\sigma\leq\kappa/(1-\kappa)$, and so $\tau_k\leq(1-\kappa)^{-1}$, and the same method gives $x_N^2\leq(1-\kappa)^{-1}$.
+
+This bound is attained. Indeed, when $0<\kappa<1$ pick isometries $s_j$ with $j\in S$, having orthogonal ranges whose sum is the whole space, or a unitary when $|S|=1$, and set $w_j=(1-\kappa)^{-1/2}s_j^*$ for $j\in S$, and $w_j=0$ otherwise. Then $\sum_jw_j^*w_j=(1-\kappa)^{-1}$ and $\sum_jq_jw_jw_j^*=\kappa(1-\kappa)^{-1}$, so we have a bounded point. When $\kappa=0$ the bound 1 is attained on the Fock representation in the variable $w_1$, or on $w_1=e_{12}$ when $q_1=-1$, with the other variables being 0.
+
+Assume now $\kappa\geq1$, so that $S$ has at least 2 elements, and let $T_d$ be the tree of depth $d$ in which each vertex which is not a leaf has one child of each label $j\in S$. Define $h$ on $T_d$ by the formula in Proposition \ref{p52}, starting with $h=1$ on the leaves. By induction, the sum in that formula is $\kappa+\kappa^2+\ldots+\kappa^j$ at the vertices of height $j$, so at the top vertex we have:
+$$h=1+\kappa+\kappa^2+\ldots+\kappa^d$$
+
+Now consider a vertex $v_0$ which is its own parent, with label $k_0\in S$, having as other children the top vertices of copies of $T_d$, with labels $j\in S-\{k_0\}$. The formula for $h$ gives
+$$h(v_0)=\frac{1+(\kappa-q_{k_0})(1+\kappa+\ldots+\kappa^d)}{1-q_{k_0}}$$
+and by Proposition \ref{p52} we obtain matricial points whose norms go to $\infty$ with $d\to\infty$.
+
+(3) When $\kappa=0$ we have $H\geq0$, and Theorem \ref{t24} applies. When $q_k>0$ for some $k$, we can use the unbounded points from Theorem \ref{t43}, with $w_k=z/\sqrt{1-q_k}$, and with $w_j=0$ for $j\neq k$ and $x_N=0$, and Theorem \ref{t14} shows that the quadric is not archimedean.
+\end{proof}
+
+As a first comment, in the isotropic case $q_k=q$ the compactness condition is $q<1/n$, and for $0<q<1/n$ the points of maximal norm from the above proof come from the Cuntz algebra $O_n$ \cite{cun}. As a second comment, by \cite{hm1} a polynomial which is strictly positive on the bounded points of an archimedean variety belongs to $\Sigma^2+I$. This fails for the varieties which are only compact, already for conics: on the quantum disc with $0<q<1$ we have $2-z^*z\geq1$ at all bounded points, but $2-z^*z\notin\Sigma^2+I$, because this element is not positive on the unbounded points.
+
+\section{Cubics and separated variables}
+
+We discuss now what happens in higher degree, for the simplest equations, namely those of the form $p(x)=g(y)$, with $p,g$ real polynomials of degree $\geq1$. This covers the circle and the hyperbola, and then the elliptic curves $y^2=p(x)$, with $p$ of degree 3.
+
+\begin{proposition}\label{p61}
+Let $X$ be the free curve $p(x)=g(y)$. Then $t=p(x)=g(y)$ is central in $\mathcal O(X)$. In a bounded irreducible point we have $t=t_0\in\mathbb R$, and
+$$x=\sum_{a\in A}ae_a\quad,\quad y=\sum_{b\in B}bf_b$$
+where $A,B$ are the sets of real roots of $p-t_0$ and $g-t_0$, which must be nonempty, and $(e_a)$, $(f_b)$ are partitions of unity with projections. Thus the bounded irreducible points over $t_0$ correspond to the irreducible unitary representations of $\mathbb Z_r*\mathbb Z_s$, where $r=|A|$ and $s=|B|$.
+\end{proposition}
+
+\begin{proof}
+The element $t$ commutes with $x$, being a polynomial in $x$, and commutes with $y$ as well. In a bounded irreducible representation it is a real scalar $t_0$, and $p(x)=t_0$ with $x$ self-adjoint shows that the spectrum of $x$ is contained in $A$, and similarly for $y$. Conversely, any 2 partitions of unity as above give a point. The last assertion comes from the fact that a partition of unity with $r$ projections is the same as a unitary representation of $\mathbb Z_r$.
+\end{proof}
+
+In other words, the free curve is fibered over the line of the variable $t$, with fibers which are duals of free products of cyclic groups. Over an algebraically closed field this fibration was observed in \cite{jls} for the cusp $y^2=x^3$, with fibers coming from $\mathbb Z_2*\mathbb Z_3$, and what is specific to our real setting is that the fibers depend on the numbers of real roots. See also \cite{sch} for the $C^*$-algebras generated by 2 partitions of unity. For the circle and the hyperbola we have $r,s\leq2$, the group is $\mathbb Z_2*\mathbb Z_2$, whose irreducible representations have dimension $\leq2$, and we recover Propositions \ref{p41} and \ref{p42}. In general, we have the following consequences:
+
+\begin{proposition}\label{p62}
+Let $X$ be the free curve $p(x)=g(y)$.
+\begin{enumerate}
+\item If $p$ or $g$ is injective on $\mathbb R$, then all the bounded points of $X$ are classical. This is the case for $x^d+y^d=1$ with $d$ odd, for $y^3=p(x)$, and for the cuspidal cubic $y^2=x^3$.
+
+\item The free curve $x^{2d}+y^{2m}=1$ is compact, and $C(X)\simeq C(S^1_{\mathbb R,+})$. More generally, in $N$ variables, the $C^*$-algebra of $\sum_ix_i^{2d_i}=1$ is isomorphic to $C(S^{N-1}_{\mathbb R,+})$.
+\end{enumerate}
+\end{proposition}
+
+\begin{proof}
+(1) If $p$ is injective on $\mathbb R$ then, by functional calculus, we have $x=p^{-1}(t)$ in any bounded point, where $t=p(x)=g(y)$. Since $t$ commutes with $y$, so does $x$.
+
+(2) The compactness is clear. The functional calculus maps $x_i\to x_i|x_i|^{d_i-1}$ produce generators satisfying $\sum_ix_i^2=1$, and are invertible, with inverses $x_i\to x_i|x_i|^{1/d_i-1}$.
+\end{proof}
+
+The second assertion shows that the free hypersurfaces $\sum_ix_i^{2d_i}=1$ are homeomorphic to the free sphere, exactly as in the classical case. Regarding the first assertion, this concerns the bounded points, where the coordinates are self-adjoint. For instance the algebra of the cusp is not commutative, as shown by the matrices $x=e_{12}$, $y=e_{21}$. Observe also that a curve $p(x)=g(y)$ with $p$ or $g$ of odd degree is never compact, already at the level of the classical points. However, compact free curves of odd degree do exist:
+
+\begin{proposition}\label{p63}
+The free cubic $x^2+y^2+[x,[x,y]]=1$ is compact, with $||x||\leq1$ and $||y||\leq2+\sqrt5$. Its classical version is the unit circle, and it has irreducible matricial points of size $2$.
+\end{proposition}
+
+\begin{proof}
+The polynomial $[x,[x,y]]$ is self-adjoint, and vanishes on the classical points. In a bounded point, pick $a$ in the spectrum of $x$ with $|a|=||x||$, and unit vectors $\xi_j$ with $(x-a)\xi_j\to0$. We have then $<[x,B]\xi_j,\xi_j>\to0$ for any bounded operator $B$, so by applying the vector states at $\xi_j$ to our equation we obtain $a^2\leq1$. Thus $||x||\leq1$, and then $||y||^2\leq||1-x^2||+||[x,[x,y]]||\leq1+4||y||$, which gives the bound on $y$. Finally, we have the following irreducible point:
+$$x=\frac{1}{2}\begin{pmatrix}1&0\\0&-1\end{pmatrix}\quad,\quad y=\frac{1}{2}\begin{pmatrix}-1&\sqrt2\\ \sqrt2&-1\end{pmatrix}$$
+
+Indeed, here $[x,[x,y]]$ is the off-diagonal part of $y$, and the verification is immediate.
+\end{proof}
+
+This example, which is not of the form $p(x)=g(y)$, was double-checked with the program conics.py.
+
+In order to discuss now the cubics, recall that a real polynomial $p$ of degree 3, with positive leading coefficient, is either increasing, or has a local maximum $M$ and a local minimum $m<M$. In the first case the bounded points of $y^2=p(x)$ are classical, by Proposition \ref{p62}. In the second case the equation $p(x)=t_0$ has 3 distinct real roots for $t_0\in(m,M)$, it has 2 distinct real roots for $t_0\in\{m,M\}$, and it has 1 real root otherwise, and we are led to the following result:
+
+\begin{theorem}\label{t63}
+Let $X$ be the free elliptic curve $y^2=p(x)$, where $p$ is a real polynomial of degree $3$ with positive leading coefficient, having a local maximum $M>0$ and a local minimum $m<M$. Then, with $m_+=\max(m,0)$:
+\begin{enumerate}
+\item The element $y^2$ is central, and takes values $t_0\geq0$ at the bounded irreducible points.
+
+\item For $t_0\in(m_+,M)$ the bounded irreducible points with $y^2=t_0$ correspond to the irreducible unitary representations of $\mathbb Z_2*\mathbb Z_3=PSL_2(\mathbb Z)$.
+
+\item For $t_0>M$ or $0<t_0<m$ we have $2$ classical points with $y^2=t_0$.
+
+\item $X$ has irreducible matricial points of arbitrarily large size.
+\end{enumerate}
+\end{theorem}
+
+\begin{proof}
+The assertions (1,2,3) follow from Proposition \ref{p61}, with $g(y)=y^2$, because $p-t_0$ has 3 real roots for $t_0\in(m,M)$ and 1 real root for $t_0\notin[m,M]$, while $y^2-t_0$ has 2 real roots for $t_0>0$. As for (4), this follows from (2) and from the fact that $PSL_2(\mathbb Z)$ has irreducible representations of arbitrarily large finite dimension, coming for instance from its finite quotients $PSL_2(\mathbb Z_l)$, with $l$ prime.
+\end{proof}
+
+At the critical levels the fibers degenerate. For instance at $t_0=M$ we have 2 distinct real roots for both equations, and the group is $\mathbb Z_2*\mathbb Z_2$, as for the conics, and at $t_0=0$ we have $y=0$, and we obtain classical points. Observe also that the theorem covers the nodal cubic $y^2=x^2(x+1)$, where $m=0$ and $M=4/27$. When $p$ has 3 real roots the classical curve has 2 components, an oval and an unbounded branch, and $m<0<M$. For $t_0\in(0,M)$ the 6 classical points with $y^2=t_0$ are on both components, and they are the 6 characters of $PSL_2(\mathbb Z)$. The other irreducible representations of this group provide noncommutative points lying over both components. Observe also the contrast with Section 4: the group $\mathbb Z_2*\mathbb Z_2$ is amenable, of type I, while $\mathbb Z_2*\mathbb Z_3$ is not. Let us mention as well that the modular group appears in noncommutative geometry, in connection with the elliptic curves, in a different way, via the noncommutative modular curve of Manin and Marcolli \cite{mma}. This is the quotient of $P^1(\mathbb R)$ by $PGL_2(\mathbb Z)$, described by a crossed product $C^*$-algebra, whose points parametrize the noncommutative tori, regarded as degenerate elliptic curves.
+
+\section{Quartics, universality and chaos}
+
+We discuss now the degree 4, with emphasis on the classification of the compact quartics up to homeomorphism, meaning up to isomorphism of the associated $C^*$-algebras. Let us start with a criterion for compactness. A homogeneous polynomial of degree $2d$ can be written in a unique way as $\sum_{uw}H_{uw}u^*w$, with the sum over the words $u,w$ of length $d$. When the polynomial is self-adjoint the matrix $H$, of size $N^d$, is Hermitian. Given $f=f^*$ of degree $2d$, we call top Gram matrix of $f$ the matrix $H$ of its component of degree $2d$.
+
+\begin{proposition}\label{p71}
+If the top Gram matrix of $f$ is positive definite, then $X_f$ is archimedean.
+\end{proposition}
+
+\begin{proof}
+Let $s=\sum_ix_i^2$, and pick $\varepsilon>0$ such that the top Gram matrix of $g=f-\varepsilon s$ is positive definite. At $d>1$ any $\varepsilon$ will do. It is enough to prove that $g+R\in\Sigma^2$ for some $R>0$, because this gives $R/\varepsilon-s\in\Sigma^2+I$. Let $V$ be the column vector formed by the words of length $\leq d$, and write $g=V^*GV$, with $G$ being a Hermitian matrix. Such a matrix exists, but is not unique, and its block on the words of length $d$ is the top Gram matrix of $g$.
+
+Now let $w=x_iv$ be a word of length $j$, with $1\leq j<d$. Since $w^*w=v^*(x_i^2v)$, we can add a number $t$ to the diagonal entry of $G$ at $w$, and subtract $t/2$ from the 2 entries of $G$ joining the words $v$ and $x_i^2v$, which have length $j-1$ and $j+1$, without changing $g$. If the block of $G$ on the words of length $>j$ is positive definite, then by doing this for all the words of length $j$, with $t$ big, the block on the words of length $\geq j$ becomes positive definite, by the Schur complement criterion. With $j=d-1,\ldots,1$ we obtain a matrix $G$ whose block on the nonempty words is positive definite. By the same criterion, adding a big number $R$ to the entry at the empty word makes $G$ positive definite, and so $g+R\in\Sigma^2$.
+\end{proof}
+
+At $d=1$ this is in agreement with Theorem \ref{t53}. Observe that the above criterion does not apply to the compact cubic from Proposition \ref{p63}, which has odd degree. There the compactness comes from a different mechanism, the component of degree 3 being a commutator with $x$, which is not seen by the approximate eigenvectors of $x$, and we do not know if that cubic is archimedean. The converse does not hold: the quartic $(x^2+y^2)^2=1$, whose points are those of the free circle, has a top Gram matrix of rank 1. Observe also that the top Gram matrix is not seen by the classical version. For instance the polynomials $x^2y^2+y^2x^2$, then $xy^2x+yx^2y$, and then $xyxy+yxyx$ are all liftings of the classical polynomial $2x^2y^2$, and their Gram matrices, with respect to the words $x^2,xy,yx,y^2$, are different.
+
+In the case of separated variables, where the curves are fibered as in Section 6, things can be worked out, up to a combinatorial problem, in terms of the 2 polynomials involved, as follows:
+
+\begin{proposition}\label{p72}
+Consider $2$ compact free curves, $p(x)=g(y)$ and $\tilde p(x)=\tilde g(y)$.
+\begin{enumerate}
+\item If $\tilde p\circ\varphi=\tau\circ p$ and $\tilde g\circ\psi=\tau\circ g$ for some homeomorphisms $\varphi,\psi,\tau$ of $\mathbb R$, then the $2$ curves are homeomorphic.
+
+\item The quartic $(x^2-1)^2+y^2=c$ with $c>1$, whose classical version is an oval, is not homeomorphic to the free circle.
+\end{enumerate}
+\end{proposition}
+
+\begin{proof}
+(1) In the $C^*$-algebra of the first curve, the elements $\tilde x=\varphi(x)$ and $\tilde y=\psi(y)$ satisfy $\tilde p(\tilde x)=\tau(p(x))=\tau(g(y))=\tilde g(\tilde y)$. This gives a morphism between the $C^*$-algebras of the curves, whose inverse is constructed in the same way, by using $\varphi^{-1},\psi^{-1},\tau^{-1}$.
+
+(2) Here $p(x)=(x^2-1)^2$ and $g(y)=c-y^2$, and for $t\in(0,1)$ the equations $p(x)=t$ and $g(y)=t$ have 4 and 2 real roots. Thus by Proposition \ref{p61} we have fibers coming from $\mathbb Z_4*\mathbb Z_2$. This group has an irreducible representation of dimension 3, coming from its quotient $S_4$, while the irreducible points of the free circle have dimension $\leq2$.
+\end{proof}
+
+Thus the classical version does not determine the free one, and the free quartics can detect the lack of convexity. The first assertion shows that the compact curves $p(x)+h(y)=0$, with $p,h$ of degree $\leq4$, fall into finitely many homeomorphism classes, the number of classes being bounded by the number of possible relative positions of the critical values of $p$ and $-h$. In general, however, the situation is very different, due to:
+
+\begin{theorem}\label{t73}
+Let $X\subset\mathbb R^N_+$ be a compact free variety, given by finitely many equations. Then there is a compact free quartic $X_f\subset\mathbb R^M_+$ with $M\geq N$, of the form $f=\sum_jg_j^2$ with $g_j=g_j^*$ of degree $\leq2$, such that $C(X_f)\simeq C(X)$.
+\end{theorem}
+
+\begin{proof}
+Add new self-adjoint variables $a_{ij},b_{ij}$, subject to the relations $2a_{ij}=x_ix_j+x_jx_i$ and $2b_{ij}=i[x_i,x_j]$. These relations have degree 2, and $x_ix_j=a_{ij}-ib_{ij}$, so the degree of the equations of $X$ is lowered. By iterating, and then by taking real and imaginary parts, we obtain a description of $X$ by self-adjoint equations $g_1=\ldots=g_s=0$ of degree $\leq2$, in a bigger set of variables, the new variables being polynomials in the old ones. Now set $f=\sum_jg_j^2$. In a bounded point the operators $g_j$ are self-adjoint, so $f=0$ is equivalent to $g_j=0$ for any $j$. Thus $X_f$ and $X$ have the same bounded points, and the same $C^*$-algebra.
+\end{proof}
+
+As an illustration, with $U=x_1+ix_2$ and $V=x_3+ix_4$, the unitarity conditions and the relation $VU=e^{2\pi i\theta}UV$ amount to 6 self-adjoint equations of degree 2. So the noncommutative tori are free quartics in $\mathbb R^4_+$, and by \cite{rie} we have uncountably many homeomorphism classes there, with empty classical version when $\theta\notin\mathbb Z$. For the relation between the noncommutative tori and the elliptic curves, we refer to \cite{mar}. In the same way, the Cuntz algebras \cite{cun}, the algebras $C(O_N^+)$ and $C(S_N^+)$ from \cite{wan}, \cite{wa2}, and the full $C^*$-algebras of the finitely presented groups are all algebras of compact free quartics. Thus the classification of the compact quartics, in arbitrarily many variables, is that of the $C^*$-algebras of all the compact free varieties given by finitely many equations.
+
+The same phenomenon holds in the classical case, where any compact real algebraic set is the zero set of a quartic, after an embedding. So the question which makes sense is that of the curves, $N=2$. But here another phenomenon appears. Consider the relation $z^*z=F(zz^*)$, with $F$ a real polynomial of degree 2, which is a free quartic. As for the quantum discs, where $F$ has degree 1, the operator $z$ moves the spectrum of $zz^*$ according to $F$, and the representation theory is governed by the dynamics of $F$, see \cite{os1}, \cite{os2}, with the case of the logistic map being studied in \cite{crm}, in terms of $X=z^*$ and $b=r/4$. In particular the second assertion below is known. In the language of \cite{bbi}, it shows that the parts of $L_r$ which are realizable with $K\times K$ matrices are governed by the cycles of length $\leq K$. The program logistic.py illustrates this numerically, by finding the cycles, away from the bifurcation values of $r$. For instance at $r=4$, where $F^n$ has $2^n$ fixed points, the numbers of cycles of length $1,2,\ldots,8$ contained in $(0,1)$ are $1,1,2,3,6,9,18,30$, while for $r\leq3$ there are no cycles of length $\geq2$. In general, the cycles of length $k$ appear when $r$ increases, via the period doubling phenomenon, and then via more complicated bifurcations:
+
+\begin{theorem}\label{t74}
+For $r\in(1,4]$ consider the free quartic curve $L_r$ given by $z^*z=r\,zz^*(1-zz^*)$, and the logistic map $F(\mu)=r\mu(1-\mu)$.
+\begin{enumerate}
+\item $L_r$ is archimedean, and its classical version is the origin, plus a circle.
+
+\item The irreducible matricial points of size $k\geq2$ are $ze_i=\sqrt{\mu_{i+1}}e_{i+1}$ for $i<k-1$ and $ze_{k-1}=\lambda\sqrt{\mu_0}e_0$, with $\lambda\in\mathbb T$, and with $\mu_0,\ldots,\mu_{k-1}$ being a cycle of length $k$ of $F$.
+
+\item The number $c_k(r)$ of cycles of length $k$ is a homeomorphism invariant of $L_r$, and the curves $L_r$ fall into uncountably many homeomorphism classes.
+\end{enumerate}
+\end{theorem}
+
+\begin{proof}
+(1) With $A=zz^*$ we have $r/4-z^*z=r(A-1/2)^2\in\Sigma^2+I$. Thus $z$ is bounded, in the sense of the proof of Theorem \ref{t24}, and so are $x,y$. The classical points are given by $|z|^2=F(|z|^2)$, so we have $z=0$, and the circle $|z|^2=1-1/r$.
+
+(2) We have $Az=zF(A)$, so $z$ maps the $\mu$-eigenspace $E_\mu$ of $A$ into $E_{F(\mu)}$, with $z^*z=F(\mu)$ there, and $z^*$ maps $E_\nu$ into the sum of the spaces $E_\mu$ with $F(\mu)=\nu$, with $zz^*=\nu$ there. On $E_0$ we have $z^*=0$, and also $z=0$, because $F(0)=0$. Thus in an irreducible representation of dimension $k\geq2$ all the eigenvalues are positive, $z^*$ is injective on each $E_\nu$, and so each eigenvalue has a preimage under $F$ which is an eigenvalue. Since there are finitely many eigenvalues, each of them must be periodic. We conclude that the eigenvalues form cycles, that the sum of the eigenspaces over a cycle is invariant, and that $z$ is a multiple of a unitary between consecutive eigenspaces. By irreducibility we have a single cycle, with eigenspaces of dimension 1, and this gives the formula in the statement. Conversely, these formulae define irreducible points, which are not equivalent for different values of $\lambda$, because $z^k$ is the scalar $\lambda(\mu_0\ldots\mu_{k-1})^{1/2}$.
+
+(3) Consider the space of irreducible representations of dimension $k\geq2$ of $C(L_r)$, up to equivalence, with the quotient of the pointwise norm topology. This space is Hausdorff, the group $U_k$ being compact. There are finitely many cycles of length $k$, because $F^k(\mu)-\mu$ is a nonzero polynomial, and by (2) the formulae there define a continuous bijection from a union of $c_k(r)$ circles onto our space, which must be a homeomorphism. Thus $c_k(r)$ is an invariant. We have $c_2(r)>0$ precisely when $r>3$. More generally, $F^n$ has $P_n=2+\sum_dd\,c_d(r)$ fixed points in $[0,1]$, with the sum over the divisors $d\geq2$ of $n$, and by \cite{mth}, \cite{msz} the entropy of $F$ is the upper limit of $\log P_n/n$, and is a continuous function of $r$, increasing from 0 to $\log2$. Thus the entropy is an invariant of $L_r$ too, and takes uncountably many values.
+\end{proof}
+
+As an illustration, for $r\leq3$ there are no cycles of length $\geq2$, and all the irreducible matricial points of $L_r$ are classical. For $r>3$ we have $c_2(r)=1$, so the irreducible points of size 2 form a circle, then $c_4(r)>0$ for $r>1+\sqrt6$, and so on, following the period doubling cascade, which accumulates at $r=3.5699\ldots$ Also, we have $c_3(r)=0$ for $r<1+\sqrt8$, and $c_3(r)=2$ for $r>1+\sqrt8$. Thus the homeomorphism type of $L_r$ changes at each value of $r$ where a new cycle appears, and it is the complexity of the bifurcation set of the logistic family which prevents a classification by a list. Observe that the classical version, which is a point plus a circle, does not see any of this. As for the bounded irreducible points of $L_r$ which are not matricial, these should come from the orbits which are not periodic, in analogy with the Fock representation of the quantum discs, see \cite{os1}, \cite{os2}.
+
+\section{Symmetries and open questions}
+
+We discuss here the quantum symmetries of our quadrics. Let $U_n^+$ be the free unitary quantum group of Wang \cite{wan}, with $\mathcal O(U_n^+)$ generated by the entries of a matrix $u$ such that $u$ and $\bar u$ are unitaries. Also, given a diagonal matrix $J$ with entries $\varepsilon_i=\pm1$, let $\mathcal O(O_J^+)$ be the universal $*$-algebra generated by self-adjoint variables $u_{ij}$ with $u^tJu=uJu^t=J$. This is a real form of the Hopf algebra of a bilinear form from \cite{bic}, \cite{dla}. We have:
+
+\begin{theorem}
+We have the following coactions, at the level of the coordinate algebras:
+\begin{enumerate}
+\item $U_n^+$ acts on the isotropic quadric $\sum_k(w_k^*w_k-qw_kw_k^*)=1$, by $w_k\to\sum_jw_j\otimes u_{jk}$.
+
+\item $O_J^+$ acts on the free hyperboloid $\sum_i\varepsilon_ix_i^2=1$, by $x_i\to\sum_jx_j\otimes u_{ji}$.
+\end{enumerate}
+\end{theorem}
+
+\begin{proof}
+(1) With $W_k=\sum_jw_j\otimes u_{jk}$ we have the following formulae, coming from the fact that $\bar u$ and $u$ are unitaries:
+$$\sum_kW_k^*W_k=\sum_{jl}w_j^*w_l\otimes(\bar uu^t)_{jl}=\sum_jw_j^*w_j\otimes1$$
+$$\sum_kW_kW_k^*=\sum_{jl}w_jw_l^*\otimes(uu^*)_{jl}=\sum_jw_jw_j^*\otimes1$$
+
+(2) With $X_i=\sum_jx_j\otimes u_{ji}$, which are self-adjoint, we have:
+$$\sum_i\varepsilon_iX_i^2=\sum_{jl}x_jx_l\otimes(uJu^t)_{jl}=\sum_j\varepsilon_jx_j^2\otimes1$$
+
+Thus the relation defining the free hyperboloid is preserved, as claimed.
+\end{proof}
+
+At $q=-1$ the first quadric is the free sphere $S^{2n-1}_{\mathbb R,+}$, where the quantum isometry group is bigger, namely $O_{2n}^+$, see \cite{bgo}. The second assertion suggests that the noncompact quadrics should be regarded as homogeneous spaces, over noncompact quantum groups. We end with a list of questions, which are in our opinion the natural next steps:
+
+\begin{question}
+What is the classification of the free quadric surfaces, $N=3$? Here $P$ is given by a vector of $\mathbb R^3$, and the problem is that of understanding its position with respect to $Q$. Do the free hyperboloids of one sheet have rulings, in some sense?
+\end{question}
+
+\begin{question}
+For a general free quadric, is compactness characterized by an inequality on the eigenvalues of $H$ with respect to $Q$, as in Theorem \ref{t53}? What are the $C^*$-algebras of the compact elliptic quadrics, and how do they depend on the parameters $q_k$?
+\end{question}
+
+\begin{question}
+What are the unbounded points of the hyperbolic conics $H(\theta,1)$ with $\theta>0$, and what are the points of the free hyperboloids? Which noncompact free quadrics are homogeneous spaces of locally compact quantum groups, in the spirit of the quantum plane and $E_q(2)$?
+\end{question}
+
+\begin{question}
+By Proposition \ref{p71}, a free hypersurface whose top Gram matrix is positive definite is archimedean. Conversely, is the top Gram matrix of an archimedean hypersurface always positive, or negative? This would be a rigid, linear algebra criterion, in contrast with the classical case, where the positivity of the leading form is a subtle matter. See \cite{dhm}, \cite{hkv}, \cite{hm2}, \cite{hm3} for related rigidity results, on convexity.
+\end{question}
+
+\begin{question}
+What are the free curves of degree $3$ and $4$ which are not of the form $p(x)=g(y)$? For instance, what are the points of the compact cubic from Proposition \ref{p63}, is this cubic archimedean, and what are the other compact cubics? In view of Theorem \ref{t74}, which compact quartic curves are of type I, and can these be classified up to homeomorphism? Are there uncountably many homeomorphism classes of compact quartic curves having real coefficients? Also, is there a relation between the fibration in Theorem \ref{t63} and the noncommutative modular curve from \cite{mma}?
+\end{question}
+
+\begin{question}
+What is the complete list of the compact curves $p(x)+h(y)=0$ with $p,h$ of degree $\leq4$, up to homeomorphism, coming from Proposition \ref{p72}? Do different relative positions of the critical values of $p$ and $-h$ always produce curves which are not homeomorphic?
+\end{question}
+
+\begin{question}
+What is the projective version of the above theory, with points at infinity, intersections and duality? As a basic example, the free conics $E(q,1)$ intersect along the classical circle. What happens over other ground fields, where the conics should correspond to the bilinear forms in $2$ variables, up to congruence?
+\end{question}
+
+\begin{thebibliography}{99}
+
+\bibitem{ash} M. Artin and W.F. Schelter, Graded algebras of global dimension 3, {\em Adv. Math.} {\bf 66} (1987), 171--216.
+
+\bibitem{ban} T. Banica, Liberations and twists of real and complex spheres, {\em J. Geom. Phys.} {\bf 96} (2015), 1--25.
+
+\bibitem{bbi} T. Banica and J. Bichon, Matrix models for noncommutative algebraic manifolds, {\em J. Lond. Math. Soc.} {\bf 95} (2017), 519--540.
+
+\bibitem{bgo} T. Banica and D. Goswami, Quantum isometries and noncommutative spheres, {\em Comm. Math. Phys.} {\bf 298} (2010), 343--356.
+
+\bibitem{bop} T. Banica and C. Opus, Quantum permutations and the Standard Model algebra (2026), \href{https://hexagonmath.org/2611.00722v1}{\textcolor{black}{\mbox{hexagon:2611.00722}}}.
+
+\bibitem{bic} J. Bichon, The representation category of the quantum group of a non-degenerate bilinear form, {\em Comm. Algebra} {\bf 31} (2003), 4831--4851.
+
+\bibitem{bi2} J. Bichon, Half-liberated real spheres and their subspaces, {\em Colloq. Math.} {\bf 144} (2016), 273--287.
+
+\bibitem{bdu} J. Bichon and M. Dubois-Violette, Half-commutative orthogonal Hopf algebras, {\em Pacific J. Math.} {\bf 263} (2013), 13--28.
+
+\bibitem{bsp} M. Bo\.zejko and R. Speicher, An example of a generalized Brownian motion, {\em Comm. Math. Phys.} {\bf 137} (1991), 519--531.
+
+\bibitem{cim} J. Cimpri\v c, A representation theorem for archimedean quadratic modules on $*$-rings, {\em Canad. Math. Bull.} {\bf 52} (2009), 39--52.
+
+\bibitem{chm} J. Cimpri\v c, J.W. Helton, S. McCullough and C. Nelson, A noncommutative real Nullstellensatz corresponds to a noncommutative real ideal: algorithms, {\em Proc. Lond. Math. Soc.} {\bf 106} (2013), 1060--1086.
+
+\bibitem{cob} L.A. Coburn, The $C^*$-algebra generated by an isometry, {\em Bull. Amer. Math. Soc.} {\bf 73} (1967), 722--726.
+
+\bibitem{cma} A. Connes and M. Marcolli, Noncommutative geometry, quantum fields and motives, AMS (2008).
+
+\bibitem{cmr} G. Cornelissen, M. Marcolli, K. Reihani and A. Vdovina, Noncommutative geometry on trees and buildings, in ``Traces in number theory, geometry and quantum fields'', Vieweg (2008), 73--98.
+
+\bibitem{crm} C. Correia Ramos, N. Martins and J. Sousa Ramos, Finite dimensional representations of $*$-algebras arising from a quadratic map, {\em Chaos Solitons Fractals} {\bf 34} (2007), 1202--1212.
+
+\bibitem{cun} J. Cuntz, Simple $C^*$-algebras generated by isometries, {\em Comm. Math. Phys.} {\bf 57} (1977), 173--185.
+
+\bibitem{dla} M. Dubois-Violette and G. Launer, The quantum group of a non-degenerate bilinear form, {\em Phys. Lett. B} {\bf 245} (1990), 175--177.
+
+\bibitem{dhm} H. Dym, J.W. Helton and S. McCullough, Irreducible noncommutative defining polynomials for convex sets have degree four or less, {\em Indiana Univ. Math. J.} {\bf 56} (2007), 1189--1231.
+
+\bibitem{har} J. Harris, Algebraic geometry: a first course, Springer (1992).
+
+\bibitem{hts} R. Hartshorne, Algebraic geometry, Springer (1977).
+
+\bibitem{hel} J.W. Helton, ``Positive'' noncommutative polynomials are sums of squares, {\em Ann. of Math.} {\bf 156} (2002), 675--694.
+
+\bibitem{hkm} J.W. Helton, I. Klep and S. McCullough, Free convex algebraic geometry, in ``Semidefinite optimization and convex algebraic geometry'', SIAM (2013), 341--405.
+
+\bibitem{hkv} J.W. Helton, I. Klep, S. McCullough and J. Vol\v ci\v c, Noncommutative polynomials describing convex sets, {\em Found. Comput. Math.} {\bf 21} (2021), 575--611.
+
+\bibitem{hms} J.W. Helton, T. Mai and R. Speicher, Applications of realizations (aka linearizations) to free probability, {\em J. Funct. Anal.} {\bf 274} (2018), 1--79.
+
+\bibitem{hm1} J.W. Helton and S. McCullough, A Positivstellensatz for non-commutative polynomials, {\em Trans. Amer. Math. Soc.} {\bf 356} (2004), 3721--3737.
+
+\bibitem{hm2} J.W. Helton and S. McCullough, Convex noncommutative polynomials have degree two or less, {\em SIAM J. Matrix Anal. Appl.} {\bf 25} (2004), 1124--1139.
+
+\bibitem{hm3} J.W. Helton and S. McCullough, Every convex free basic semi-algebraic set has an LMI representation, {\em Ann. of Math.} {\bf 176} (2012), 979--1013.
+
+\bibitem{hmp} J.W. Helton, S. McCullough and M. Putinar, A non-commutative Positivstellensatz on isometries, {\em J. Reine Angew. Math.} {\bf 568} (2004), 71--80.
+
+\bibitem{hse} R.A. Horn and V.V. Sergeichuk, Canonical forms for complex matrix congruence and $*$congruence, {\em Linear Algebra Appl.} {\bf 416} (2006), 1010--1032.
+
+\bibitem{hs2} R.A. Horn and V.V. Sergeichuk, Canonical matrices of bilinear and sesquilinear forms, {\em Linear Algebra Appl.} {\bf 428} (2008), 193--223.
+
+\bibitem{jls} S. J\o ndrup, O.A. Laudal and A.B. Sletsj\o e, Noncommutative plane curves, \href{https://arxiv.org/pdf/math/0405350}{\textcolor{black}{\mbox{arXiv:math/0405350}}}.
+
+\bibitem{jsw} P.E.T. J\o rgensen, L.M. Schmitt and R.F. Werner, $q$-canonical commutation relations and stability of the Cuntz algebra, {\em Pacific J. Math.} {\bf 165} (1994), 131--151.
+
+\bibitem{ksc} I. Klep and M. Schweighofer, Connes' embedding conjecture and sums of hermitian squares, {\em Adv. Math.} {\bf 217} (2008), 1816--1837.
+
+\bibitem{kle} S. Klimek and A. Lesniewski, Quantum Riemann surfaces I. The unit disc, {\em Comm. Math. Phys.} {\bf 146} (1992), 103--122.
+
+\bibitem{kuz} A. Kuzmin, CCR and CAR algebras are connected via a path of Cuntz-Toeplitz algebras, {\em Comm. Math. Phys.} {\bf 399} (2023), 1623--1645.
+
+\bibitem{msw} T. Mai, R. Speicher and M. Weber, Absence of algebraic relations and of zero divisors under the assumption of full non-microstates free entropy dimension, {\em Adv. Math.} {\bf 304} (2017), 1080--1107.
+
+\bibitem{msy} T. Mai, R. Speicher and S. Yin, The free field: realization via unbounded operators and Atiyah property, {\em J. Funct. Anal.} {\bf 285} (2023), Paper No. 110016.
+
+\bibitem{mma} Yu.I. Manin and M. Marcolli, Continued fractions, modular symbols, and noncommutative geometry, {\em Selecta Math.} {\bf 8} (2002), 475--521.
+
+\bibitem{mar} M. Marcolli, Arithmetic noncommutative geometry, AMS (2005).
+
+\bibitem{mpa} M. Marcolli and A.M. Paolucci, Cuntz-Krieger algebras and wavelets on fractals, {\em Complex Anal. Oper. Theory} {\bf 5} (2011), 41--81.
+
+\bibitem{mth} J. Milnor and W. Thurston, On iterated maps of the interval, in ``Dynamical systems'', Lecture Notes in Math. {\bf 1342}, Springer (1988), 465--563.
+
+\bibitem{msz} M. Misiurewicz and W. Szlenk, Entropy of piecewise monotone mappings, {\em Studia Math.} {\bf 67} (1980), 45--63.
+
+\bibitem{os1} V. Ostrovsky\u\i\ and Yu. Samo\u\i lenko, On pairs of self-adjoint operators, {\em Seminar Sophus Lie} {\bf 3} (1993), 185--218.
+
+\bibitem{os2} V. Ostrovsky\u\i\ and Yu. Samo\u\i lenko, Representations of $*$-algebras and dynamical systems, {\em J. Nonlinear Math. Phys.} {\bf 2} (1995), 133--150.
+
+\bibitem{pwo} W. Pusz and S.L. Woronowicz, Twisted second quantization, {\em Rep. Math. Phys.} {\bf 27} (1989), 231--257.
+
+\bibitem{put} M. Putinar, Positive polynomials on compact semi-algebraic sets, {\em Indiana Univ. Math. J.} {\bf 42} (1993), 969--984.
+
+\bibitem{rie} M.A. Rieffel, $C^*$-algebras associated with irrational rotations, {\em Pacific J. Math.} {\bf 93} (1981), 415--429.
+
+\bibitem{sch} B. Sch\"afer, Classification of certain $C^*$-algebras generated by two partitions of unity, \href{https://arxiv.org/pdf/2509.01309}{\textcolor{black}{\mbox{arXiv:2509.01309}}}.
+
+\bibitem{sc1} K. Schm\"udgen, The $K$-moment problem for compact semi-algebraic sets, {\em Math. Ann.} {\bf 289} (1991), 203--206.
+
+\bibitem{sc3} K. Schm\"udgen, Integrable operator representations of $\mathbb R_q^2$, $X_{q,\gamma}$ and $SL_q(2,\mathbb R)$, {\em Comm. Math. Phys.} {\bf 159} (1994), 217--237.
+
+\bibitem{sc4} K. Schm\"udgen, Noncommutative real algebraic geometry: some basic concepts and first ideas, in ``Emerging applications of algebraic geometry'', Springer (2009), 325--350.
+
+\bibitem{sc2} K. Schm\"udgen, An invitation to unbounded representations of $*$-algebras on Hilbert space, Springer (2020).
+
+\bibitem{sha} I.R. Shafarevich, Basic algebraic geometry, Springer (1974).
+
+\bibitem{wan} S. Wang, Free products of compact quantum groups, {\em Comm. Math. Phys.} {\bf 167} (1995), 671--692.
+
+\bibitem{wa2} S. Wang, Quantum symmetry groups of finite spaces, {\em Comm. Math. Phys.} {\bf 195} (1998), 195--211.
+
+\bibitem{wo1} S.L. Woronowicz, Quantum $E(2)$ group and its Pontryagin dual, {\em Lett. Math. Phys.} {\bf 23} (1991), 251--263.
+
+\end{thebibliography}
+
+\end{document}

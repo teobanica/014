@@ -1,0 +1,14 @@
+r = 2.50, numbers of k-cycles in (0,1), k = 1,...,8: [1, 0, 0, 0, 0, 0, 0, 0], max error in the relation 1.1e-16
+          fixed points of F^n in [0,1], n = 1,...,8: [2, 2, 2, 2, 2, 2, 2, 2], log(P_8)/8 = 0.0866
+r = 3.20, numbers of k-cycles in (0,1), k = 1,...,8: [1, 1, 0, 0, 0, 0, 0, 0], max error in the relation 3.3e-16
+          fixed points of F^n in [0,1], n = 1,...,8: [2, 4, 2, 4, 2, 4, 2, 4], log(P_8)/8 = 0.1733
+r = 3.50, numbers of k-cycles in (0,1), k = 1,...,8: [1, 1, 0, 1, 0, 0, 0, 0], max error in the relation 6.1e-16
+          fixed points of F^n in [0,1], n = 1,...,8: [2, 4, 2, 8, 2, 4, 2, 8], log(P_8)/8 = 0.2599
+r = 3.56, numbers of k-cycles in (0,1), k = 1,...,8: [1, 1, 0, 1, 0, 0, 0, 1], max error in the relation 3.9e-16
+          fixed points of F^n in [0,1], n = 1,...,8: [2, 4, 2, 8, 2, 4, 2, 16], log(P_8)/8 = 0.3466
+r = 3.70, numbers of k-cycles in (0,1), k = 1,...,8: [1, 1, 0, 1, 0, 2, 0, 3], max error in the relation 2.7e-15
+          fixed points of F^n in [0,1], n = 1,...,8: [2, 4, 2, 8, 2, 16, 2, 32], log(P_8)/8 = 0.4332
+r = 3.84, numbers of k-cycles in (0,1), k = 1,...,8: [1, 1, 2, 1, 2, 2, 4, 5], max error in the relation 7.2e-15
+          fixed points of F^n in [0,1], n = 1,...,8: [2, 4, 8, 8, 12, 22, 30, 48], log(P_8)/8 = 0.4839
+r = 4.00, numbers of k-cycles in (0,1), k = 1,...,8: [1, 1, 2, 3, 6, 9, 18, 30], max error in the relation 1.3e-14
+          fixed points of F^n in [0,1], n = 1,...,8: [2, 4, 8, 16, 32, 64, 128, 256], log(P_8)/8 = 0.6931

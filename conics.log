@@ -1,0 +1,27 @@
+(1) traces of m x^2, m (xy+yx), m y^2, m x, m y, with m = i[x,y]
+  k = 2, max |trace| = 1.1e-16, tr(m^2) = 1.080
+  k = 3, max |trace| = 1.8e-15, tr(m^2) = 35.008
+  k = 5, max |trace| = 1.4e-14, tr(m^2) = 285.760
+  k = 8, max |trace| = 1.3e-14, tr(m^2) = 840.393
+(2) free circle, z = [[0,a],[b,0]] with |a|^2 + |b|^2 = 2
+  |z^2| = 0.00, error in x^2+y^2=1: 2.2e-16, error in z^2 scalar: 0.0e+00, [x,y] = 0: False
+  |z^2| = 0.30, error in x^2+y^2=1: 5.7e-18, error in z^2 scalar: 0.0e+00, [x,y] = 0: False
+  |z^2| = 0.70, error in x^2+y^2=1: 7.2e-18, error in z^2 scalar: 0.0e+00, [x,y] = 0: False
+  |z^2| = 1.00, error in x^2+y^2=1: 2.9e-18, error in z^2 scalar: 0.0e+00, [x,y] = 0: True
+(3) free hyperbola, u^2 = s, v^2 = t, uv + vu = 2
+  s = 1.0, t = 1.0, error 0.0e+00, [u,v] = 0: True
+  s = 2.0, t = 0.5, error 4.4e-16, [u,v] = 0: True
+  s = 2.0, t = 3.0, error 4.4e-16, [u,v] = 0: False
+  s = 0.5, t = 10.0, error 4.4e-16, [u,v] = 0: False
+(4) Fock representation, z e_n = sqrt(1 - q^(n+1)) e_(n+1), truncated at size 200
+  q = -0.9, error away from the cutoff 4.4e-16, norm^2 = 1.9000, max(1,1-q) = 1.9000
+  q = -0.5, error away from the cutoff 2.2e-16, norm^2 = 1.5000, max(1,1-q) = 1.5000
+  q =  0.0, error away from the cutoff 0.0e+00, norm^2 = 1.0000, max(1,1-q) = 1.0000
+  q =  0.5, error away from the cutoff 1.7e-16, norm^2 = 1.0000, max(1,1-q) = 1.0000
+  q =  0.9, error away from the cutoff 3.3e-16, norm^2 = 1.0000, max(1,1-q) = 1.0000
+(5) compact cubic x^2 + y^2 + [x,[x,y]] = 1, irreducible point of size 2, and random search
+  error 0.0e+00, norm of [x,y] = 0.7071
+  500 trials, max norm of x 0.9996 (bound 1), max norm of y 1.2075 (bound 2+sqrt(5) = 4.2361)
+  1000 trials, max norm of x 0.9996 (bound 1), max norm of y 1.2075 (bound 2+sqrt(5) = 4.2361)
+  1500 trials, max norm of x 0.9996 (bound 1), max norm of y 1.2077 (bound 2+sqrt(5) = 4.2361)
+  2000 trials, max norm of x 0.9996 (bound 1), max norm of y 1.2077 (bound 2+sqrt(5) = 4.2361)
